@@ -21,10 +21,38 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         CreateRooms();
     }
 
+    private Vector2Int createChest(HashSet<Vector2Int> floor)
+    {
+        Vector2Int lastPosition = new Vector2Int();
+        foreach (var position in floor)
+        {
+            if (Random.Range(0, floor.Count) % (floor.Count)/2 == 0)
+            {
+                return position;
+            }
+
+            lastPosition = position;
+        }
+
+        return lastPosition;
+    }
+    private void CreateDecorations(HashSet<Vector2Int> floors)
+    {
+        HashSet<Vector2Int> Decorations = new HashSet<Vector2Int>();
+        foreach (var position in floors)
+        {
+            if (Random.Range(0, 1000) % 30 == 0)
+            {
+                Decorations.Add(position);
+            }
+        }
+        tilemapVisualizer.PaintDecorationTiles(Decorations);
+    }
     private void CreateRooms()
     {
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
-
+        
+        
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
 
         if (randomWalkRooms)
@@ -47,25 +75,56 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         floor.UnionWith(corridors);
 
         tilemapVisualizer.PaintFloorTiles(floor);
+        CreateDecorations(floor);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
+    }
+    
+    private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
+    {
+        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
+        foreach (var room in roomsList)
+        {
+            var activeFloorRoom = new HashSet<Vector2Int>();
+            for (int col = offset; col < room.size.x - offset; col++)
+            {
+                for (int row = offset; row < room.size.y - offset; row++)
+                {
+                    Vector2Int position = (Vector2Int)room.min + new Vector2Int(col, row);
+                    activeFloorRoom.Add(position);
+                }
+            }
+            ChestPositions.Add(createChest(activeFloorRoom));
+            floor.UnionWith(activeFloorRoom);
+            activeFloorRoom.Clear();
+        }
+        tilemapVisualizer.PaintChestTiles(ChestPositions);
+        return floor;
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
+        HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
             var roomBounds = roomsList[i];
             var roomCenter = new Vector2Int(Mathf.RoundToInt(roomBounds.center.x), Mathf.RoundToInt(roomBounds.center.y));
             var roomFloor = RunRandomWalk(randomWalkParameters, roomCenter);
+            var activeFloorRoom = new HashSet<Vector2Int>();
             foreach (var position in roomFloor)
             {
                 if(position.x >= (roomBounds.xMin + offset) && position.x <= (roomBounds.xMax - offset) && position.y >= (roomBounds.yMin - offset) && position.y <= (roomBounds.yMax - offset))
                 {
-                    floor.Add(position);
+                    activeFloorRoom.Add(position);
                 }
             }
+            ChestPositions.Add(createChest(activeFloorRoom));
+            
+            floor.UnionWith(activeFloorRoom);
+            activeFloorRoom.Clear();
         }
+        tilemapVisualizer.PaintChestTiles(ChestPositions);
         return floor;
     }
 
@@ -133,20 +192,5 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         return closest;
     }
 
-    private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
-    {
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        foreach (var room in roomsList)
-        {
-            for (int col = offset; col < room.size.x - offset; col++)
-            {
-                for (int row = offset; row < room.size.y - offset; row++)
-                {
-                    Vector2Int position = (Vector2Int)room.min + new Vector2Int(col, row);
-                    floor.Add(position);
-                }
-            }
-        }
-        return floor;
-    }
+    
 }
