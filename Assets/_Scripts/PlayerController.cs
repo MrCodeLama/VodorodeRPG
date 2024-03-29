@@ -51,4 +51,9 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    public void SetStartPosition(Vector2Int position)
+    {
+        transform.position = new Vector3(position.x + 0.5f, position.y+0.5f, 0);
+    }
 }

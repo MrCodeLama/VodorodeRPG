@@ -16,6 +16,10 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField]
     private bool randomWalkRooms = false;
 
+    [SerializeField]
+    private PlayerController playerController;
+    
+
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
@@ -63,8 +67,9 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         {
             floor = CreateSimpleRooms(roomsList);
         }
-        
 
+        placePlayer(floor);
+        
         List<Vector2Int> roomCenters = new List<Vector2Int>();
         foreach (var room in roomsList)
         {
@@ -78,7 +83,24 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         CreateDecorations(floor);
         WallGenerator.CreateWalls(floor, tilemapVisualizer);
     }
-    
+
+    private void placePlayer(HashSet<Vector2Int> floor)
+    {
+        Vector2Int lastPosition = new Vector2Int();
+        foreach (var position in floor)
+        {
+
+            if (Random.Range(0, 10) % 4 == 0)
+            {
+                playerController.SetStartPosition(position);
+                return;
+            }
+
+            lastPosition = position;
+        }
+
+        playerController.SetStartPosition(lastPosition);
+    }
     private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
