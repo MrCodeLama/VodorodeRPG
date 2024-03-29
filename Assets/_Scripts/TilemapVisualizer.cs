@@ -3,26 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 public class TilemapVisualizer : MonoBehaviour
 {
     [SerializeField]
     private Tilemap floorTilemap, wallTilemap;
+
+    [SerializeField] private List<TileBase> floorTiles;
+    
     [SerializeField]
-    private TileBase floorTile, wallTop, wallSideRight, wallSiderLeft, wallBottom, wallFull, 
+    private TileBase wallTop, wallSideRight, wallSiderLeft, wallBottom, wallFull, 
         wallInnerCornerDownLeft, wallInnerCornerDownRight, 
         wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
 
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
     {
-        PaintTiles(floorPositions, floorTilemap, floorTile);
-    }
-
-    private void PaintTiles(IEnumerable<Vector2Int> positions, Tilemap tilemap, TileBase tile)
-    {
-        foreach (var position in positions)
+        foreach (var position in floorPositions)
         {
-            PaintSingleTile(tilemap, tile, position);
+            PaintSingleTile(floorTilemap, floorTiles[Random.Range(0, floorTiles.Count)], position);
         }
     }
 
