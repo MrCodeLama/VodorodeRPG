@@ -8,15 +8,31 @@ using Random = UnityEngine.Random;
 public class TilemapVisualizer : MonoBehaviour
 {
     [SerializeField]
-    private Tilemap floorTilemap, wallTilemap;
+    private Tilemap floorTilemap, wallTilemap, decorationTilemap, chestTilemap;
 
     [SerializeField] private List<TileBase> floorTiles;
-    
-    [SerializeField]
-    private TileBase wallTop, wallSideRight, wallSiderLeft, wallBottom, wallFull, 
+
+    [SerializeField] private List<TileBase> decorationTiles;
+    [SerializeField] private List<TileBase> chestTiles;
+    [SerializeField] private TileBase wallTop, wallSideRight, wallSiderLeft, wallBottom, wallFull, 
         wallInnerCornerDownLeft, wallInnerCornerDownRight, 
         wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
 
+    public void PaintDecorationTiles(IEnumerable<Vector2Int> decorationPositions)
+    {
+        foreach (var position in decorationPositions)
+        {
+            PaintSingleTile(decorationTilemap, decorationTiles[Random.Range(0, decorationTiles.Count)], position);
+        }
+    }
+    public void PaintChestTiles(IEnumerable<Vector2Int> chestPositions)
+    {
+        foreach (var position in chestPositions)
+        {
+            PaintSingleTile(chestTilemap, chestTiles[Random.Range(0, chestTiles.Count)], position);
+        }
+    }
+    
     public void PaintFloorTiles(IEnumerable<Vector2Int> floorPositions)
     {
         foreach (var position in floorPositions)
@@ -63,6 +79,8 @@ public class TilemapVisualizer : MonoBehaviour
     {
         floorTilemap.ClearAllTiles();
         wallTilemap.ClearAllTiles();
+        decorationTilemap.ClearAllTiles();
+        chestTilemap.ClearAllTiles();
     }
 
     internal void PaintSingleCornerWall(Vector2Int position, string binaryType)
