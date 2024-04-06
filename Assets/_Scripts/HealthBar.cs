@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,16 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-
+    [SerializeField] private GameManager gameManager;
     public Slider slider;
 
-    public void setHealth(int health)
+    private void Start()
     {
-        slider.value = health;
+        slider.maxValue = gameManager.maxHP;
     }
 
-    public void setMaxHealth(int health)
+    private void Update()
     {
-        slider.maxValue = health;
-        slider.value = health;
-    }
-
-    public int getCurrentHealth()
-    {
-        return (int)slider.value;
+        slider.value = gameManager.currentHP;
     }
 }
