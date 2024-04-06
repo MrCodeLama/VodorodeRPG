@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour
             
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
-                //animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
-                //animator.SetFloat("Vertical", 0);
+                animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
+                animator.SetFloat("Vertical", 0);
 
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f),
                         0.2f, whatStopsMovement))
@@ -49,8 +49,8 @@ public class PlayerController : MonoBehaviour
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                //animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
-                //animator.SetFloat("Horizontal", 0);
+                animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+                animator.SetFloat("Horizontal", 0);
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f),
                         0.2f, whatStopsMovement))
                 {
@@ -59,8 +59,8 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                //animator.SetFloat("Vertical", 0);
-                //animator.SetFloat("Horizontal", 0);
+                animator.SetFloat("Vertical", 0);
+                animator.SetFloat("Horizontal", 0);
             }
         }
     }
