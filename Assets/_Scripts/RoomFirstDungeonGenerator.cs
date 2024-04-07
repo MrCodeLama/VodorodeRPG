@@ -6,18 +6,13 @@ using Random = UnityEngine.Random;
 
 public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
 {
+    [SerializeField] private int minRoomWidth = 4, minRoomHeight = 4;
+    [SerializeField] private int dungeonWidth = 20, dungeonHeight = 20;
     [SerializeField]
-    private int minRoomWidth = 4, minRoomHeight = 4;
-    [SerializeField]
-    private int dungeonWidth = 20, dungeonHeight = 20;
-    [SerializeField]
-    [Range(0,10)]
-    private int offset = 1;
-    [SerializeField]
-    private bool randomWalkRooms = false;
-
-    [SerializeField]
-    private PlayerController playerController;
+    [Range(0,10)] private int offset = 1;
+    [SerializeField] private bool randomWalkRooms = false;
+    [SerializeField] private float shopProbability = 10f;
+    [SerializeField] private PlayerController playerController;
     
 
     protected override void RunProceduralGeneration()
@@ -38,6 +33,18 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             lastPosition = position;
         }
 
+        return lastPosition;
+    }
+    private Vector2Int createShop(HashSet<Vector2Int> floor)
+    {
+        Vector2Int lastPosition = new Vector2Int();
+        foreach (var position in floor)
+        {
+            if (Random.Range(0, floor.Count) % (floor.Count)/2 == 0)
+            {
+                return position;
+            }
+        }
         return lastPosition;
     }
     private void CreateDecorations(HashSet<Vector2Int> floors)
@@ -104,6 +111,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
+        HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         foreach (var room in roomsList)
         {
             var activeFloorRoom = new HashSet<Vector2Int>();
@@ -116,16 +124,22 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 }
             }
             ChestPositions.Add(createChest(activeFloorRoom));
+            if (Random.Range(0, 100) <= shopProbability)
+            {
+                ShopPositions.Add(createShop(activeFloorRoom));
+            }
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
         tilemapVisualizer.PaintChestTiles(ChestPositions);
+        tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
         HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
+        HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
         {
@@ -140,12 +154,17 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                     activeFloorRoom.Add(position);
                 }
             }
+            if (Random.Range(0, 100) <= shopProbability)
+            {
+                ShopPositions.Add(createShop(activeFloorRoom));
+            }
             ChestPositions.Add(createChest(activeFloorRoom));
             
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
         tilemapVisualizer.PaintChestTiles(ChestPositions);
+        tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
 

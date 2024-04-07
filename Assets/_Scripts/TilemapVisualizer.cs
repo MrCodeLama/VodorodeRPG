@@ -8,12 +8,13 @@ using Random = UnityEngine.Random;
 public class TilemapVisualizer : MonoBehaviour
 {
     [SerializeField]
-    private Tilemap floorTilemap, wallTilemap, decorationTilemap, chestTilemap;
+    private Tilemap floorTilemap, wallTilemap, decorationTilemap, chestTilemap, shopTilemap;
 
     [SerializeField] private List<TileBase> floorTiles;
 
     [SerializeField] private List<TileBase> decorationTiles;
     [SerializeField] private List<TileBase> chestTiles;
+    [SerializeField] private TileBase shopTile;
     [SerializeField] private TileBase wallTop, wallSideRight, wallSiderLeft, wallBottom, wallFull, 
         wallInnerCornerDownLeft, wallInnerCornerDownRight, 
         wallDiagonalCornerDownRight, wallDiagonalCornerDownLeft, wallDiagonalCornerUpRight, wallDiagonalCornerUpLeft;
@@ -30,6 +31,13 @@ public class TilemapVisualizer : MonoBehaviour
         foreach (var position in chestPositions)
         {
             PaintSingleTile(chestTilemap, chestTiles[Random.Range(0, chestTiles.Count)], position);
+        }
+    }
+    public void PaintShopTiles(IEnumerable<Vector2Int> shopPositions)
+    {
+        foreach (var position in shopPositions)
+        {
+            PaintSingleTile(shopTilemap, shopTile, position);
         }
     }
     
@@ -81,6 +89,7 @@ public class TilemapVisualizer : MonoBehaviour
         wallTilemap.ClearAllTiles();
         decorationTilemap.ClearAllTiles();
         chestTilemap.ClearAllTiles();
+        shopTilemap.ClearAllTiles();
     }
 
     internal void PaintSingleCornerWall(Vector2Int position, string binaryType)
