@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
 
         if (Vector3.Distance(transform.position, movePoint.position) <= 0.01f)
         {
-            
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) == 1f)
             {
                 animator.SetFloat("Horizontal", Input.GetAxisRaw("Horizontal"));
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (Mathf.Abs(Input.GetAxisRaw("Vertical")) == 1f)
             {
-                animator.SetFloat("Vertical", Input.GetAxisRaw("Vertical"));
+                animator.SetFloat("Vertical", 1f);
                 animator.SetFloat("Horizontal", 0);
                 if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(0f, Input.GetAxisRaw("Vertical"), 0f),
                         0.2f, whatStopsMovement))

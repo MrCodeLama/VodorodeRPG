@@ -19652,7 +19652,7 @@ MonoBehaviour:
   currentHP: 20
   GameIsPaused: 0
   maxHP: 20
-  moveSpeed: 4
+  moveSpeed: 6
   killedMobs: 0
   delay: 0.2
   animator: {fileID: 1392176793}
