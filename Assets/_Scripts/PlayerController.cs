@@ -13,6 +13,14 @@ public class PlayerController : MonoBehaviour
     {
         movePoint.parent = null;
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.name == "Shops")
+        {
+            Debug.Log("543");
+        }
+    }
+
 
     void Update()
     {
