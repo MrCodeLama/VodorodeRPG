@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
             facingLeft = value;
         }
     }
+
+    public static PlayerController Instance;
     [SerializeField] private GameManager gameManager;
     private float moveSpeed;
     private PlayerControls playerControls;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
