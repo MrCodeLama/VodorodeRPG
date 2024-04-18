@@ -8,14 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     public bool FacingLeft
     {
-        get
-        {
-            return facingLeft;
-        }
-        set 
-        {
-            facingLeft = value;
-        }
+        get { return facingLeft;}
+        set { facingLeft = value; }
     }
 
     public static PlayerController Instance;
@@ -26,7 +20,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
-    
+    [SerializeField] private Transform weaponCollider;
     private bool facingLeft = false;
 
     private void Awake()
@@ -54,6 +48,11 @@ public class PlayerController : MonoBehaviour
     {
         AdjustPlayerFacingDirection();
         Move();
+    }
+
+    public Transform GetWeaponCollider()
+    {
+        return weaponCollider;
     }
 
     private void PlayerInput()
