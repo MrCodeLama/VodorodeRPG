@@ -32,7 +32,7 @@ public class ActiveWeapon : Singleton<ActiveWeapon>
         Attack();
     }
 
-    public void ToggleAttacking(bool value)
+    public void ToggleIsAttacking(bool value)
     {
         isAttacking = value;
     }

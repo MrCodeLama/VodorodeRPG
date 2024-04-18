@@ -7,6 +7,6 @@ public class Bow : MonoBehaviour, IWeapon
     public void Attack()
     {
         Debug.Log("Bow attack");
-        ActiveWeapon.Instance.ToggleAttacking(false);
+        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
 }

@@ -39,7 +39,7 @@ public class Sword : MonoBehaviour, IWeapon
     private IEnumerator AttackCDRoutine()
     {
         yield return new WaitForSeconds(swordAttackCD);
-        ActiveWeapon.Instance.ToggleAttacking(false);
+        ActiveWeapon.Instance.ToggleIsAttacking(false);
     }
     
     public void DoneAttackingevent()
