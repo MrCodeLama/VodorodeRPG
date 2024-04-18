@@ -377,17 +377,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coins: 300
   upgrades:
-  - name: Health
+  - healthRestore: 0
+    name: Health
     cost: 10
     image: {fileID: 115013217, guid: 139cff28442706e4bb2ea3f7671abc0e, type: 3}
     quantity: 0
     itemRef: {fileID: 0}
-  - name: Armor
+  - healthRestore: 0
+    name: Armor
     cost: 20
     image: {fileID: -1045102338, guid: 139cff28442706e4bb2ea3f7671abc0e, type: 3}
     quantity: 0
     itemRef: {fileID: 0}
-  - name: Speed
+  - healthRestore: 0
+    name: Speed
     cost: 300
     image: {fileID: 2027735885, guid: 139cff28442706e4bb2ea3f7671abc0e, type: 3}
     quantity: 0
@@ -23075,7 +23078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667510ce4018e804b9a108df0a2b8161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP: 20
+  currentHP: 10
   GameIsPaused: 0
   maxHP: 20
   moveSpeed: 6
