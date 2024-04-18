@@ -19,22 +19,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         CreateRooms();
     }
-
-    private Vector2Int createChest(HashSet<Vector2Int> floor)
-    {
-        Vector2Int lastPosition = new Vector2Int();
-        foreach (var position in floor)
-        {
-            if (Random.Range(0, floor.Count) % (floor.Count)/2 == 0)
-            {
-                return position;
-            }
-
-            lastPosition = position;
-        }
-
-        return lastPosition;
-    }
+    
     private Vector2Int createShop(HashSet<Vector2Int> floor)
     {
         Vector2Int lastPosition = new Vector2Int();
@@ -110,7 +95,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
     {
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
-        HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         foreach (var room in roomsList)
         {
@@ -123,7 +107,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                     activeFloorRoom.Add(position);
                 }
             }
-            ChestPositions.Add(createChest(activeFloorRoom));
             if (Random.Range(0, 100) <= shopProbability)
             {
                 ShopPositions.Add(createShop(activeFloorRoom));
@@ -131,14 +114,12 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
-        tilemapVisualizer.PaintChestTiles(ChestPositions);
         tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
-        HashSet<Vector2Int> ChestPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
@@ -158,12 +139,10 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             {
                 ShopPositions.Add(createShop(activeFloorRoom));
             }
-            ChestPositions.Add(createChest(activeFloorRoom));
             
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
-        tilemapVisualizer.PaintChestTiles(ChestPositions);
         tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
