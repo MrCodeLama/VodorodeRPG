@@ -94,6 +94,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     }
     private HashSet<Vector2Int> CreateSimpleRooms(List<BoundsInt> roomsList)
     {
+        bool _isShopExists = false;
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         foreach (var room in roomsList)
@@ -107,19 +108,21 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                     activeFloorRoom.Add(position);
                 }
             }
-            if (Random.Range(0, 100) <= shopProbability)
-            {
-                ShopPositions.Add(createShop(activeFloorRoom));
-            }
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
+        if (!_isShopExists)
+        {
+            ShopPositions.Add(createShop(floor));
+        }
+        
         tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
     {
+        bool _isShopExists = false;
         HashSet<Vector2Int> ShopPositions = new HashSet<Vector2Int>();
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
         for (int i = 0; i < roomsList.Count; i++)
@@ -135,14 +138,15 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                     activeFloorRoom.Add(position);
                 }
             }
-            if (Random.Range(0, 100) <= shopProbability)
-            {
-                ShopPositions.Add(createShop(activeFloorRoom));
-            }
-            
             floor.UnionWith(activeFloorRoom);
             activeFloorRoom.Clear();
         }
+
+        if (!_isShopExists)
+        {
+            ShopPositions.Add(createShop(floor));
+        }
+        
         tilemapVisualizer.PaintShopTiles(ShopPositions);
         return floor;
     }
