@@ -25,8 +25,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void addHP(int amount)
+    public void addHP(int amount=2)
     {
+        amount = 2;
         if (currentHP + amount >= maxHP)
         {
             currentHP = maxHP;
