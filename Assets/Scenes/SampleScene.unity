@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 22948007}
   - component: {fileID: 22948006}
   - component: {fileID: 22948005}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -809,7 +809,7 @@ GameObject:
   - component: {fileID: 359625278}
   - component: {fileID: 359625280}
   - component: {fileID: 359625279}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1245,7 +1245,7 @@ GameObject:
   - component: {fileID: 577600650}
   - component: {fileID: 577600652}
   - component: {fileID: 577600651}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1670,6 +1670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880843646}
   - component: {fileID: 880843647}
+  - component: {fileID: 880843648}
   m_Layer: 0
   m_Name: ActiveWeapon
   m_TagString: Untagged
@@ -1703,6 +1704,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 559a64e29dd382b408028578e8b843f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &880843648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880843645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dceac95994854641abe5e31469c2512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &892782892
@@ -2235,7 +2248,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.0657143, y: 0.0657143, z: 0}
   m_MaxChunkCount: 16
@@ -2495,7 +2508,7 @@ GameObject:
   - component: {fileID: 1432664235}
   - component: {fileID: 1432664237}
   - component: {fileID: 1432664236}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16375,7 +16388,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -16410,7 +16423,7 @@ GameObject:
   - component: {fileID: 1489235376}
   - component: {fileID: 1489235378}
   - component: {fileID: 1489235377}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26392,7 +26405,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -26621,7 +26634,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!224 &1657528706
 RectTransform:
@@ -26636,8 +26649,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1945557911}
-  - {fileID: 577600650}
   - {fileID: 340277876}
+  - {fileID: 577600650}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -26657,7 +26670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1289a4ae378b64ebc8702d7e1edf7aad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1880149427}
   pauseMenuUI: {fileID: 577600649}
 --- !u!1 &1667952900
 GameObject:
@@ -26732,7 +26745,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -27397,7 +27410,7 @@ GameObject:
   - component: {fileID: 1698576348}
   - component: {fileID: 1698576347}
   - component: {fileID: 1698576346}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Setting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27518,7 +27531,7 @@ GameObject:
   - component: {fileID: 1703168775}
   - component: {fileID: 1703168774}
   - component: {fileID: 1703168773}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28018,7 +28031,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -196.82, y: -57.839996}
+  m_AnchoredPosition: {x: -196.82007, y: -57.839966}
   m_SizeDelta: {x: 296.96, y: 47.12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945557912
@@ -28086,24 +28099,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1880149427}
   slider: {fileID: 1945557912}
---- !u!1 &1959837102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1766993979335800467, guid: 9cd85714ae9ba8247863bf42d97decd6, type: 3}
-  m_PrefabInstance: {fileID: 1256531840126194735}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1959837111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959837102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10378140fc55b0c4d9e98c118d2b7020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.2
 --- !u!1 &2053556355
 GameObject:
   m_ObjectHideFlags: 0
@@ -28258,7 +28253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: af9c22510ef46c048b2c80d99006abe0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -28421,10 +28416,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1766993979335800467, guid: 9cd85714ae9ba8247863bf42d97decd6, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1959837111}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cd85714ae9ba8247863bf42d97decd6, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
