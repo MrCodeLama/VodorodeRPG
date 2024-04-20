@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4571590602665458591}
   - component: {fileID: 6938128057230254867}
   m_Layer: 0
-  m_Name: SlimeDeathVFX
+  m_Name: ProjectileVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.227451, g: 0.35686275, b: 0.5803922, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -288,7 +288,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7
+      scalar: 0.08
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -981,7 +981,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 8
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4836,7 +4836,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 22c3de13b30547e41b965cdc8218918a, type: 2}
+  - {fileID: 2100000, guid: e764acfbb5c1b774f929bec80e3dd5ea, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

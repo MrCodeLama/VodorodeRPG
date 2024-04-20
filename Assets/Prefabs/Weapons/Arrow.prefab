@@ -181,7 +181,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!96 &2328000886462995968
 TrailRenderer:
@@ -320,4 +320,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb7c901990c9db4a806926c0f96fb74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
+  moveSpeed: 22
+  particleOnHitPrefabVFX: {fileID: 110702135367023820, guid: 06e89c0d8657b834a8ece3b4e4979926, type: 3}

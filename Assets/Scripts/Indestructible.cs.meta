@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: a6f1b4e8fff18644aac1cce84fd2cccc
+guid: ef01c88c6b5b0e74087a902f6a402e6f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - deathVFXPrefab: {fileID: 2486282066125712428, guid: 38166877a21d5e74ab5c6e18a39187d6, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

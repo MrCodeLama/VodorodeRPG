@@ -2186,6 +2186,7 @@ GameObject:
   - component: {fileID: 1351799976}
   - component: {fileID: 1351799975}
   - component: {fileID: 1351799977}
+  - component: {fileID: 1351799978}
   m_Layer: 0
   m_Name: Shops
   m_TagString: Untagged
@@ -2365,6 +2366,18 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1351799978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351799973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c88c6b5b0e74087a902f6a402e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1377427831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2587,6 +2600,7 @@ GameObject:
   - component: {fileID: 1441489762}
   - component: {fileID: 1441489760}
   - component: {fileID: 1441489761}
+  - component: {fileID: 1441489763}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -16412,6 +16426,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709312581}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1441489763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441489759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c88c6b5b0e74087a902f6a402e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1489235375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16716,6 +16742,7 @@ GameObject:
   - component: {fileID: 1634440938}
   - component: {fileID: 1634440939}
   - component: {fileID: 1634440941}
+  - component: {fileID: 1634440942}
   m_Layer: 8
   m_Name: Walls
   m_TagString: Untagged
@@ -26465,6 +26492,18 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1634440942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1634440937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c88c6b5b0e74087a902f6a402e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652924909
 GameObject:
   m_ObjectHideFlags: 3
@@ -26683,6 +26722,7 @@ GameObject:
   - component: {fileID: 1667952901}
   - component: {fileID: 1667952903}
   - component: {fileID: 1667952902}
+  - component: {fileID: 1667952904}
   m_Layer: 0
   m_Name: Decorations
   m_TagString: Untagged
@@ -27348,6 +27388,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1667952904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667952900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c88c6b5b0e74087a902f6a402e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1671293749
 GameObject:
   m_ObjectHideFlags: 0
