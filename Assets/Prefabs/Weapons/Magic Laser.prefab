@@ -88,7 +88,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!50 &2837246354284652644
 Rigidbody2D:
   serializedVersion: 4
@@ -145,7 +145,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.19990951, y: -0.0035404805}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04e25a2c8a5ebf4eac7b9cda603c43c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserGlowTime: 0.22
+  laserGrowTime: 0.2
 --- !u!114 &1851564115417506251
 MonoBehaviour:
   m_ObjectHideFlags: 0

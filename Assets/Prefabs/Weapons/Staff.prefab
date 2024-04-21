@@ -134,7 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponInfo: {fileID: 11400000, guid: e066cc96b77b37748b01179fd193519f, type: 2}
   magicLaser: {fileID: 1860992256168671162, guid: 858da6d22d9ac7c488089e337c46c10f, type: 3}
-  magicLazerSpawnPoint: {fileID: 3516936472413839843}
+  magicLaserSpawnPoint: {fileID: 3516936472413839843}
 --- !u!95 &8885938610651148981
 Animator:
   serializedVersion: 5
