@@ -13,13 +13,18 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField] private bool randomWalkRooms = false;
     [SerializeField] private float shopProbability = 10f;
     [SerializeField] private PlayerController playerController;
-    
+    [SerializeField] private GameObject portalPrefab;
 
     protected override void RunProceduralGeneration()
     {
+        removePortal();
         CreateRooms();
     }
-    
+
+    private void removePortal()
+    {
+        Destroy(GameObject.FindWithTag("portal"));
+    }
     private Vector2Int createShop(HashSet<Vector2Int> floor)
     {
         Vector2Int lastPosition = new Vector2Int();
@@ -44,6 +49,27 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         }
         tilemapVisualizer.PaintDecorationTiles(Decorations);
     }
+
+    private void createPortal(HashSet<Vector2Int> floor)
+    {
+        bool created = false;
+        int i = 0;
+        foreach (var position in floor)
+        {
+            i++;
+            if (i >= Random.Range(floor.Count/2, floor.Count))
+            {
+                if (floor.Contains(new Vector2Int(position.x, position.y + 1)))
+                {
+                    if (created) return;
+                    Instantiate(portalPrefab, new Vector3(position.x-0.5f, position.y ), Quaternion.identity);
+                    created = true;
+                }
+            }
+        }
+        
+    }
+    
     private void CreateRooms()
     {
         var roomsList = ProceduralGenerationAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
@@ -58,6 +84,8 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         {
             floor = CreateSimpleRooms(roomsList);
         }
+
+        createPortal(floor);
 
         placePlayer(floor);
         
