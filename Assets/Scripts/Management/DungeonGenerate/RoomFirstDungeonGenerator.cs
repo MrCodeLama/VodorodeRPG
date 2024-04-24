@@ -20,7 +20,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         removePortal();
         CreateRooms();
     }
-
     private void removePortal()
     {
         Destroy(GameObject.FindWithTag("portal"));
@@ -62,7 +61,8 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 if (floor.Contains(new Vector2Int(position.x, position.y + 1)))
                 {
                     if (created) return;
-                    Instantiate(portalPrefab, new Vector3(position.x-0.5f, position.y ), Quaternion.identity);
+                    Instantiate(portalPrefab, new Vector3(position.x+0.5f, position.y+0.5f ), Quaternion.identity);
+                    gameObject.transform.position = new Vector3(position.x+0.5f, position.y+0.5f);
                     created = true;
                 }
             }
