@@ -14,7 +14,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     [SerializeField] private float shopProbability = 10f;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject portalPrefab;
-
+    [SerializeField] private EnemySpawn enemySpawn;
     protected override void RunProceduralGeneration()
     {
         removePortal();
@@ -33,6 +33,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
             {
                 return position;
             }
+            lastPosition = position;
         }
         return lastPosition;
     }
@@ -76,6 +77,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         
         HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
 
+        enemySpawn.DeleteAll();
         if (randomWalkRooms)
         {
             floor = CreateRoomsRandomly(roomsList);
@@ -86,7 +88,6 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         }
 
         createPortal(floor);
-
         placePlayer(floor);
         
         List<Vector2Int> roomCenters = new List<Vector2Int>();
@@ -137,6 +138,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 }
             }
             floor.UnionWith(activeFloorRoom);
+            enemySpawn.createEnemies(activeFloorRoom);
             activeFloorRoom.Clear();
         }
         if (!_isShopExists)
@@ -167,6 +169,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
                 }
             }
             floor.UnionWith(activeFloorRoom);
+            enemySpawn.createEnemies(activeFloorRoom);
             activeFloorRoom.Clear();
         }
 
