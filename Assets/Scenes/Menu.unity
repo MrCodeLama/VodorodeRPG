@@ -767,6 +767,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   distance: 2.7
+  highSpeed: 15
+  delayBeforeHighSpeed: 120
+  fallDistance: 2.4
 --- !u!1 &601628932
 GameObject:
   m_ObjectHideFlags: 0
