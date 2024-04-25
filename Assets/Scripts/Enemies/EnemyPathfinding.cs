@@ -1,36 +1,39 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class EnemyPathfinding : MonoBehaviour
 {
-    [SerializeField] private GameManager gameManager;
-    private float moveSpeed;
+    [SerializeField] private float moveSpeed = 2f;
+
     private Rigidbody2D rb;
     private Vector2 moveDir;
     private Knockback knockback;
     private SpriteRenderer spriteRenderer;
-    private void Awake()
-    {
+
+    private void Awake() {
         spriteRenderer = GetComponent<SpriteRenderer>();
         knockback = GetComponent<Knockback>();
         rb = GetComponent<Rigidbody2D>();
-        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
-        moveSpeed = gameManager.moveSpeed;
     }
 
-    private void FixedUpdate()
-    {
-        if(knockback.gettingKnockedBack) {return;}
+    private void FixedUpdate() {
+        if (knockback.gettingKnockedBack) { return; }
+
         rb.MovePosition(rb.position + moveDir * (moveSpeed * Time.fixedDeltaTime));
-        spriteRenderer.flipX = (moveDir.x >= 0);
-        
+
+        if (moveDir.x < 0) {
+            spriteRenderer.flipX = true;
+        } else {
+            spriteRenderer.flipX = false;
+        }
     }
 
-    public void MoveTo(Vector2 targetPosition)
-    {
+    public void MoveTo(Vector2 targetPosition) {
         moveDir = targetPosition;
+    }
+
+    public void StopMoving() {
+        moveDir = Vector3.zero;
     }
 }

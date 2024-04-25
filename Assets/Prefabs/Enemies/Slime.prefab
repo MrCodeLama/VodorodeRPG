@@ -17,10 +17,9 @@ GameObject:
   - component: {fileID: 597489274479151215}
   - component: {fileID: 4260985648311306439}
   - component: {fileID: -8064106920436295231}
-  - component: {fileID: -1656258799485127039}
   - component: {fileID: -4461753087389316076}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Slime
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -180,6 +179,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 6
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &597489274479151215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,19 +232,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 3
   deathVFXPrefab: {fileID: 110702135367023820, guid: aef8b45fba0ee574895c0cfc2bd8ae1c, type: 3}
---- !u!114 &-1656258799485127039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1766993979335800467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10378140fc55b0c4d9e98c118d2b7020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockBackTime: 0.2
 --- !u!114 &-4461753087389316076
 MonoBehaviour:
   m_ObjectHideFlags: 0

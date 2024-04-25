@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private float moveSpeed;
     private PlayerControls playerControls;
+    private Knockback knockback;
     private Vector2 movement;
     private Rigidbody2D rb;
     private Animator myAnimator;
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
         moveSpeed = gameManager.moveSpeed;
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+        knockback = GetComponent<Knockback>();
     }
 
     private void OnEnable()
@@ -65,6 +67,7 @@ public class PlayerController : MonoBehaviour
     
     private void Move()
     {
+        if (knockback.gettingKnockedBack) { return;}
         rb.MovePosition(rb.position + movement * (moveSpeed * Time.fixedDeltaTime));
     }
 

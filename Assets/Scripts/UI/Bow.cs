@@ -21,7 +21,7 @@ public class Bow : MonoBehaviour, IWeapon
         myAnimator.SetTrigger("Fire");
         GameObject newArrow =
             Instantiate(arrowPrefab, arrowSpawnPoint.position, ActiveWeapon.Instance.transform.rotation);
-        newArrow.GetComponent<Projectile>().UpdateWeaponInfo(weaponInfo);
+        newArrow.GetComponent<Projectile>().UpdateProjectileInfo(weaponInfo.weaponRange);
     }
 
     public WeaponInfo GetWeaponInfo()

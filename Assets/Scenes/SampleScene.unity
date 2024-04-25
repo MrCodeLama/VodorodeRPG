@@ -251,6 +251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &6582147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,6 +511,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &22060346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,6 +771,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &22408506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1149,6 +1164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &58627011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,6 +1514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &81309964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1810,6 +1835,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &134361587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,6 +2322,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &207351346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2668,6 +2703,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &300140069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2923,6 +2963,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &307228903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3344,6 +3389,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &331815020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,6 +3897,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &390479979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4102,6 +4157,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &406915776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4453,6 +4513,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &446131597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4708,6 +4773,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &450208760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4963,6 +5033,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &460302548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5218,6 +5293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &473316325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5473,6 +5553,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &506540297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5687,7 +5772,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 24.5, z: -10}
+  m_LocalPosition: {x: 10.43, y: 24.894, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6010,6 +6095,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &570258190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6418,6 +6508,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &583835745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6620,6 +6715,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610382353}
   m_CullTransparentMesh: 1
+--- !u!1001 &642898940
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6327691582282220251, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_Name
+      value: Bat
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.649967
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 23.973806
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761973029228974446, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
 --- !u!1 &700183194
 GameObject:
   m_ObjectHideFlags: 0
@@ -6748,6 +6900,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &700183202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7051,6 +7208,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &733906991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7306,6 +7468,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &739620382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7561,6 +7728,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &750980109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7891,6 +8063,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &755058002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8146,6 +8323,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &761425684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8401,6 +8583,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &795619144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8731,6 +8918,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &861459136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9119,6 +9311,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &909642452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9374,6 +9571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &933737528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9686,6 +9888,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &955997732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9941,6 +10148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &958256447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10196,6 +10408,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &978118789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10451,6 +10668,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &999208574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10706,6 +10928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1010052631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10961,6 +11188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1028102500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11216,6 +11448,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1050975082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11471,6 +11708,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1077520485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11726,6 +11968,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1093531832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11981,6 +12228,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1094014087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12236,6 +12488,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1094796976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12491,6 +12748,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1150370994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12746,6 +13008,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1157745011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13001,6 +13268,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1159642266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13256,6 +13528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1169551152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13511,6 +13788,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1194159242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13766,6 +14048,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1205193792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14127,6 +14414,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1234024557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14413,6 +14705,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1256009359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14668,6 +14965,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1264256198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14995,6 +15297,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1297156342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15453,6 +15760,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1308649753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15708,6 +16020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1315156824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16038,6 +16355,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1336128655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16510,6 +16832,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1363186857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16765,6 +17092,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1380256493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17020,6 +17352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1381422019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17350,6 +17687,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1414637036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17605,6 +17947,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1423220910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27368,6 +27715,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1473317048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27603,7 +27955,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa8afa40974176c42ae9b6b6abf279de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EnemyPrefab: {fileID: 1766993979335800467, guid: 9cd85714ae9ba8247863bf42d97decd6, type: 3}
+  EnemyPrefab:
+  - {fileID: 6327691582282220251, guid: 2d56ccd20fea31a48b840ebee0221f6c, type: 3}
+  - {fileID: 1766993979335800467, guid: 9cd85714ae9ba8247863bf42d97decd6, type: 3}
   Enemies: {fileID: 1308376787}
 --- !u!4 &1509565847
 Transform:
@@ -27945,6 +28299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1582066595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28200,6 +28559,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1584771735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28455,6 +28819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1598702286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28785,6 +29154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1621183040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36425,6 +36799,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1759872117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36755,6 +37134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1774687637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37010,6 +37394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1776608317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37265,6 +37654,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1794489793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37588,6 +37982,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1871175248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37985,6 +38384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1895609825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38240,6 +38644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1942751125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38600,6 +39009,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1976305692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38855,6 +39269,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &1992707206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39110,6 +39529,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2027529968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39365,6 +39789,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2038276085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39620,6 +40049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2049355439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39875,6 +40309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2053280612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40016,6 +40455,9 @@ GameObject:
   - component: {fileID: 2053556361}
   - component: {fileID: 2053556360}
   - component: {fileID: 2053556362}
+  - component: {fileID: 2053556365}
+  - component: {fileID: 2053556364}
+  - component: {fileID: 2053556363}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -40046,7 +40488,7 @@ Transform:
   m_GameObject: {fileID: 2053556355}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: 24.5, z: 0}
+  m_LocalPosition: {x: 10.43, y: 24.894, z: 0}
   m_LocalScale: {x: 3.32, y: 3.32, z: 3.32}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -40189,6 +40631,48 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2053556363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053556355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4992e404f7428af49a371ba2334e8640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlashMat: {fileID: 2100000, guid: e764acfbb5c1b774f929bec80e3dd5ea, type: 2}
+  restoreDefaultMatTime: 0.2
+--- !u!114 &2053556364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053556355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10378140fc55b0c4d9e98c118d2b7020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackTime: 0.2
+--- !u!114 &2053556365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053556355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef24b4d29e423f44ea97027fd4434e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockBackThrustAmount: 10
+  damageRecoveryTime: 1
+  gameManager: {fileID: 1880149427}
 --- !u!1 &2067313298
 GameObject:
   m_ObjectHideFlags: 0
@@ -40317,6 +40801,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2067313306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40647,6 +41136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2079020109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40902,6 +41396,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2118825591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41157,6 +41656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2123297909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41494,6 +41998,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65c9e4da73883a14599251340c7895a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roamChangeDirFloat: 2
+  attackRange: 5
+  enemyType: {fileID: 0}
+  attackCooldown: 2
+  stopMovingWhileAttacking: 0
 --- !u!114 &2143255039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41639,3 +42148,4 @@ SceneRoots:
   - {fileID: 90887875}
   - {fileID: 1308376788}
   - {fileID: 1524501766}
+  - {fileID: 642898940}
