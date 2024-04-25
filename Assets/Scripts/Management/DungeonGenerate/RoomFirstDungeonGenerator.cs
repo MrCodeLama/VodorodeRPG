@@ -20,6 +20,13 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
         removePortal();
         CreateRooms();
     }
+
+    private void Awake()
+    {
+        tilemapVisualizer.Clear();
+        RunProceduralGeneration();
+    }
+
     private void removePortal()
     {
         Destroy(GameObject.FindWithTag("portal"));
