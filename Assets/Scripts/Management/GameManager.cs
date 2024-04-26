@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int killedMobs = 0;
     public float delay = 0.2f;
     [SerializeField]private Animator animator;
+    public int coins = 0;
     public static GameManager Instance { get; private set; }
     private void Awake()
     {
@@ -24,31 +25,8 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-
-    public void addHP(int amount)
-    {
-        amount = 2;
-        if (currentHP + amount >= maxHP)
-        {
-            currentHP = maxHP;
-        }
-        else
-        {
-            currentHP += amount;
-        }
-    }
     
-    public void reduceHP(int amount)
-    {
-        if (currentHP == amount)
-        {
-            GameOver();
-        }
-        else
-        {
-            currentHP -= amount;
-        }
-    }
+    
     private void GameOver()
     {
         animator.SetBool("_isAlive", false);

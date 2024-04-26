@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5155862363634047253}
   - component: {fileID: 2990085918017620698}
   - component: {fileID: 37809636376757620}
+  - component: {fileID: 5617972383033107056}
   m_Layer: 0
   m_Name: Bat
   m_TagString: enemy
@@ -205,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4c033914a019a44b60c03fae98cc6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  moveSpeed: 2
 --- !u!114 &901382437664895635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,3 +261,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 3394972368596505090, guid: dd60b382156f9984fb2e561359175249, type: 3}
+--- !u!114 &5617972383033107056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327691582282220251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0ab6a9af986d0438eac4fdaa31ed08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goinCoinPrefab: {fileID: 4412214868279613300, guid: e5a13dcae843bdb43b5082de1cc01598, type: 3}

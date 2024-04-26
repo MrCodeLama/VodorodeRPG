@@ -2,21 +2,24 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Singleton<PlayerHealth>
 {
     private int maxHealth;
     [SerializeField]private float knockBackThrustAmount = 10f;
     [SerializeField]private float damageRecoveryTime = 1;
     [SerializeField] private GameManager gameManager;
-
+    
+    private Slider healthSlider;
     private int currentHealth;
     private bool canTakeDamage = true;
     private Knockback knockback;
     private Flash flash;
     
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         flash = GetComponent<Flash>();
         knockback = GetComponent<Knockback>();
         maxHealth = gameManager.maxHP;
@@ -24,8 +27,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        gameManager.currentHP = maxHealth;
         currentHealth = maxHealth;
+        UpdateHealthSlider();
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -35,6 +38,15 @@ public class PlayerHealth : MonoBehaviour
         if (enemy)
         {
             TakeDamage(1, other.transform);
+        }
+    }
+
+    public void HealPlayer()
+    {
+        if (currentHealth < maxHealth)
+        {
+            currentHealth++;
+            UpdateHealthSlider();
         }
     }
 
@@ -49,11 +61,32 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damageAmount;
         gameManager.currentHP -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
+        UpdateHealthSlider();
+        CheckIfPlayerDeath();
     }
 
+    private void CheckIfPlayerDeath()
+    {
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Debug.Log("Player DEath");
+        }
+    }
     private IEnumerator DamageRecoveryRoutine()
     {
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;
+    }
+
+    private void UpdateHealthSlider()
+    {
+        if (healthSlider == null)
+        {
+            healthSlider = GameObject.Find("HealthBar").GetComponent<Slider>();
+        }
+
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
 }

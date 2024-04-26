@@ -768,8 +768,8 @@ MonoBehaviour:
   speed: 1
   distance: 2.7
   highSpeed: 15
-  delayBeforeHighSpeed: 120
-  fallDistance: 2.4
+  delayBeforeHighSpeed: 5
+  fallDistance: 2.45
 --- !u!1 &601628932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1276,7 +1276,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1568701500}
-  - component: {fileID: 1568701499}
   - component: {fileID: 1568701498}
   - component: {fileID: 1568701497}
   - component: {fileID: 1568701496}
@@ -1423,20 +1422,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1568701499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568701494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e8865148fad294590f36dd3a8ab9f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
-  weaponCollider: {fileID: 1036794928}
 --- !u!4 &1568701500
 Transform:
   m_ObjectHideFlags: 0

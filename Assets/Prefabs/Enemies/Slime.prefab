@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4260985648311306439}
   - component: {fileID: -8064106920436295231}
   - component: {fileID: -4461753087389316076}
+  - component: {fileID: 2966908674447585861}
   m_Layer: 0
   m_Name: Slime
   m_TagString: enemy
@@ -196,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c4c033914a019a44b60c03fae98cc6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  moveSpeed: 2
 --- !u!95 &4260985648311306439
 Animator:
   serializedVersion: 5
@@ -246,3 +247,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   whiteFlashMat: {fileID: 2100000, guid: e764acfbb5c1b774f929bec80e3dd5ea, type: 2}
   restoreDefaultMatTime: 0.2
+--- !u!114 &2966908674447585861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766993979335800467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a0ab6a9af986d0438eac4fdaa31ed08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goinCoinPrefab: {fileID: 4412214868279613300, guid: e5a13dcae843bdb43b5082de1cc01598, type: 3}

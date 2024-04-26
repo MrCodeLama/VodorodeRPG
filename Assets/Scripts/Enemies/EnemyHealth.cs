@@ -31,11 +31,15 @@ public class EnemyHealth : MonoBehaviour
         DetectDeath();
     }
 
-    public void DetectDeath()
-    {
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathVFXPrefab, transform.position, quaternion.identity);
+    private IEnumerator CheckDetectDeathRoutine() {
+        yield return new WaitForSeconds(flash.GetRestoreMatTime());
+        DetectDeath();
+    }
+
+    public void DetectDeath() {
+        if (currentHealth <= 0) {
+            Instantiate(deathVFXPrefab, transform.position, Quaternion.identity);
+            GetComponent<PickupSpawner>().DropItems();
             Destroy(gameObject);
         }
     }

@@ -18,6 +18,7 @@ public class ShopManager : MonoBehaviour
    public PlayerController player;
    private void Awake()
    {
+      shopUI = GameObject.FindWithTag("shopUI");
       gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
       if (instance == null)
       {
@@ -81,7 +82,7 @@ public class ShopManager : MonoBehaviour
             gameManager.moveSpeed += 2f;
             break;
          case "Health":
-            gameManager.addHP(upgrade.healthRestore);
+            //gameManager.addHP(upgrade.healthRestore);
             break;
          default:
             Debug.Log("no upgrade availible");
