@@ -51,6 +51,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            EconomyManager.Instance.UpdateCurrentCoins();
             Destroy(gameObject);
         }
     }
