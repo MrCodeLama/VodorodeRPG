@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class PlayerHealth : Singleton<PlayerHealth>
 {
-    private int maxHealth;
+    public int maxHealth;
     [SerializeField]private float knockBackThrustAmount = 10f;
     [SerializeField]private float damageRecoveryTime = 1;
     [SerializeField] private GameManager gameManager;
     private const string HEALTH_SLIDER_TEXT = "HealthBar";
     
     private Slider healthSlider;
-    private int currentHealth;
+    public int currentHealth;
     private bool canTakeDamage = true;
     private Knockback knockback;
     private Flash flash;

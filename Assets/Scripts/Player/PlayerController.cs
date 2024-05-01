@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Subject
 {
     public bool FacingLeft
     {
@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
         set { facingLeft = value; }
     }
 
+    [SerializeField] private PlayerHealth playerHealth;
     public static PlayerController Instance;
     [SerializeField] private GameManager gameManager;
     private float moveSpeed;
@@ -44,6 +45,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerInput();
+        if (playerHealth.currentHealth <= 3)
+        {
+            NotifyObservers(PlayerActions.LowHP, true);
+        }
     }
 
     private void FixedUpdate()
@@ -60,7 +65,19 @@ public class PlayerController : MonoBehaviour
     private void PlayerInput()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
-        
+        if (movement != Vector2.zero)
+        {
+            NotifyObservers(PlayerActions.Move, true);
+        }
+        else
+        {
+            NotifyObservers(PlayerActions.Move, false);
+        }
+
+        if (playerControls.Combat.Attack.ReadValue<float>() == 1)
+        {
+            NotifyObservers(PlayerActions.Attack, true);
+        }
         myAnimator.SetFloat("moveX", movement.x);
         myAnimator.SetFloat("moveY", movement.y);
     }
