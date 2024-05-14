@@ -10,6 +10,9 @@ TagManager:
   - enemies
   - shopUI
   - canvas
+  - DeathAudio
+  - IdleAudio
+  - LowHPAudio
   layers:
   - Default
   - TransparentFX

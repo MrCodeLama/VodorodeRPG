@@ -9,5 +9,7 @@ public class DeathScreen : MonoBehaviour
     {
         Time.timeScale = 0f;
         deathScreenUI.SetActive(true);
+        GameObject.FindWithTag("IdleAudio").SetActive(false);
+        GameObject.FindWithTag("LowHPAudio").SetActive(false);
     }
 }
