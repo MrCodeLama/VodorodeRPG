@@ -17,6 +17,7 @@ TagManager:
   - ShopManager
   - EconomyManager
   - coins
+  - coincollect
   layers:
   - Default
   - TransparentFX

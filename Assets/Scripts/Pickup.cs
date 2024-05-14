@@ -12,13 +12,14 @@ public class Pickup : MonoBehaviour
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private float heightY = 1.5f;
     [SerializeField] private float popDuration = 1f;
-    
+    [SerializeField] private AudioSource sound;
     private Vector3 moveDir;
     private Rigidbody2D rb;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        sound = GameObject.FindWithTag("coincollect").GetComponent<AudioSource>();
     }
 
     private void Start()
@@ -51,6 +52,7 @@ public class Pickup : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerController>())
         {
+            sound.Play();
             EconomyManager.Instance.UpdateCurrentCoins();
             Destroy(gameObject);
         }

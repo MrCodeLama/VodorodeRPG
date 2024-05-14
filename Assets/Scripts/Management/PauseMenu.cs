@@ -6,6 +6,8 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
 
+    public AudioSource sound;
+    public GameObject notWanted;
     public GameObject pauseMenuUI;
     void Update()
     {
@@ -14,16 +16,20 @@ public class PauseMenu : MonoBehaviour
             if (gameManager.GameIsPaused)
             {
                 Resume();
+
+                
             }
             else
             {
                 Pause();
+                notWanted.SetActive(false);
             }
         }
     }
 
     public void Resume()
-    {
+    {sound.Play();
+        notWanted.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gameManager.GameIsPaused = false;
@@ -38,6 +44,7 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMenu()
     {
+        sound.Play();
         Invoke("BackToMenuDelay", gameManager.delay);
         Time.timeScale = 1f;
     }

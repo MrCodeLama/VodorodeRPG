@@ -212,3 +212,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   heightY: 1.5
   popDuration: 0.5
+  sound: {fileID: 0}
