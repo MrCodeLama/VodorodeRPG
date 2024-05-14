@@ -5,19 +5,28 @@ using UnityEngine;
 
 public class ShopTrigger : MonoBehaviour
 {
+    private ShopManager shopManager;
+
+    private void Awake()
+    {
+        shopManager = GameObject.FindWithTag("ShopManager").GetComponent<ShopManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Shop"))
         {
-            ShopManager.instance.ToggleShop();
+            Debug.Log("fdghj");
+            shopManager.ToggleShop();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Shop"))
         {
-            ShopManager.instance.ToggleShop();
+            Debug.Log("fdghj");
+            shopManager.ToggleShop();
         }
     }
 }

@@ -10,7 +10,7 @@ public class ShopManager : MonoBehaviour
    public static ShopManager instance;
    public int coins = 300;
    public Upgrade[] upgrades;
-   
+   private bool toggle = false;
    public Text coinText;
    public GameObject shopUI;
    public Transform shopContent;
@@ -18,7 +18,7 @@ public class ShopManager : MonoBehaviour
    public PlayerController player;
    private void Awake()
    {
-      shopUI = GameObject.FindWithTag("shopUI");
+      
       gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
       if (instance == null)
       {
@@ -91,7 +91,9 @@ public class ShopManager : MonoBehaviour
    }
    public void ToggleShop()
    {
-      shopUI.SetActive(!shopUI.activeSelf);
+      Debug.Log("fdas");
+      toggle = !toggle;
+      shopUI.SetActive(toggle);
    }
 
    public void OnGUI()
