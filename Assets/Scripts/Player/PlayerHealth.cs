@@ -63,7 +63,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            Debug.Log("Player DEath");
+            GameObject.FindWithTag("canvas").GetComponent<DeathScreen>().Death();
         }
     }
     private IEnumerator DamageRecoveryRoutine()

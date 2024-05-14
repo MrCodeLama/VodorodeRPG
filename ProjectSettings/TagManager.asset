@@ -9,6 +9,7 @@ TagManager:
   - enemy
   - enemies
   - shopUI
+  - canvas
   layers:
   - Default
   - TransparentFX
