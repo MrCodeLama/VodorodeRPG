@@ -25,6 +25,7 @@ public class RoomFirstDungeonGenerator : SimpleRandomWalkDungeonGenerator
     {
         tilemapVisualizer.Clear();
         RunProceduralGeneration();
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void removePortal()
