@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int currentHP = 20;
     public bool GameIsPaused = false;
     public int maxHP = 20;
     public float moveSpeed = 4f;

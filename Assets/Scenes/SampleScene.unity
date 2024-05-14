@@ -1119,7 +1119,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 73387239}
-  - {fileID: 534653043}
   m_Father: {fileID: 1657528706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2089,85 +2088,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!1 &534653042
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 534653043}
-  - component: {fileID: 534653045}
-  - component: {fileID: 534653044}
-  m_Layer: 5
-  m_Name: Coins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &534653043
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534653042}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 277930458}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 0, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &534653044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534653042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: eb26b3d7c82491b4387d70498d93bb73, type: 3}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 0
---- !u!222 &534653045
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534653042}
-  m_CullTransparentMesh: 1
 --- !u!1 &555431631
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,7 +3138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976b78de4d4c2a14c816b70b8b46e554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 300
   upgrades:
   - healthRestore: 2
     name: Health
@@ -3226,7 +3145,6 @@ MonoBehaviour:
     image: {fileID: 115013217, guid: 139cff28442706e4bb2ea3f7671abc0e, type: 3}
     quantity: 0
     itemRef: {fileID: 0}
-  coinText: {fileID: 534653044}
   shopUI: {fileID: 277930457}
   shopContent: {fileID: 152437170}
   itemPrefab: {fileID: 3798443555038865404, guid: 25b84a9e1bfcbed47a735378e816211e, type: 3}
@@ -3337,7 +3255,7 @@ GameObject:
   - component: {fileID: 1116500696}
   m_Layer: 0
   m_Name: CoinAmountText
-  m_TagString: Untagged
+  m_TagString: coins
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3821,7 +3739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1308376788
 Transform:
   m_ObjectHideFlags: 0
@@ -20940,6 +20858,7 @@ GameObject:
   - component: {fileID: 1657528703}
   - component: {fileID: 1657528707}
   - component: {fileID: 1657528708}
+  - component: {fileID: 1657528709}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: canvas
@@ -21062,6 +20981,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScreenUI: {fileID: 1089109044}
+--- !u!114 &1657528709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657528702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d00a326c1c110145a48b1f15d7117ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 1945557912}
 --- !u!1 &1667952900
 GameObject:
   m_ObjectHideFlags: 0
@@ -21842,7 +21774,7 @@ GameObject:
   - component: {fileID: 1834003043}
   m_Layer: 0
   m_Name: EconomyManager
-  m_TagString: Untagged
+  m_TagString: EconomyManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21874,6 +21806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fae2551532761c9448d60bb7a99335bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldText: {fileID: 1116500696}
+  currentGold: 150
 --- !u!1 &1844396722
 GameObject:
   m_ObjectHideFlags: 0
@@ -22062,7 +21996,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 667510ce4018e804b9a108df0a2b8161, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHP: 10
   GameIsPaused: 0
   maxHP: 20
   moveSpeed: 6

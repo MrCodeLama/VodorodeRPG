@@ -51,7 +51,6 @@ public class PlayerHealth : Singleton<PlayerHealth>
         
         canTakeDamage = false;
         currentHealth -= damageAmount;
-        gameManager.currentHP -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
         UpdateHealthSlider();
         CheckIfPlayerDeath();
@@ -73,7 +72,7 @@ public class PlayerHealth : Singleton<PlayerHealth>
         canTakeDamage = true;
     }
 
-    private void UpdateHealthSlider()
+    public void UpdateHealthSlider()
     {
         if (healthSlider == null)
         {
@@ -82,5 +81,19 @@ public class PlayerHealth : Singleton<PlayerHealth>
 
         healthSlider.maxValue = maxHealth;
         healthSlider.value = currentHealth;
+    }
+    
+    
+
+    public void addHP(int amount)
+    {
+        if (currentHealth + amount >= maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += amount;
+        }
     }
 }

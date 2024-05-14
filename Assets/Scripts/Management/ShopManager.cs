@@ -8,18 +8,19 @@ public class ShopManager : MonoBehaviour
 {
    private GameManager gameManager;
    public static ShopManager instance;
-   public int coins = 300;
    public Upgrade[] upgrades;
    private bool toggle = false;
-   public Text coinText;
    public GameObject shopUI;
    public Transform shopContent;
    public GameObject itemPrefab;
    public PlayerController player;
+   private EconomyManager economyManager;
+   private PlayerHealth playerHealth;
    private void Awake()
    {
-      
+      economyManager = GameObject.FindGameObjectWithTag("EconomyManager").GetComponent<EconomyManager>();
       gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+      playerHealth = GameObject.FindWithTag("Player").GetComponent<PlayerHealth>();
       if (instance == null)
       {
          instance = this;
@@ -28,7 +29,6 @@ public class ShopManager : MonoBehaviour
       {
          Destroy(gameObject);
       }
-      DontDestroyOnLoad(gameObject);
    }
 
    public void Start()
@@ -64,13 +64,12 @@ public class ShopManager : MonoBehaviour
 
    public void BuyUpgrade(Upgrade upgrade)
    {
-      if (coins>=upgrade.cost)
+      if (economyManager.currentGold>=upgrade.cost)
       {
-         coins -= upgrade.cost;
+         economyManager.currentGold -= upgrade.cost;
          upgrade.quantity++;
          upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();
          ApplyUpgrade(upgrade);
-         coinText.text = "Coins: " + coins.ToString(); 
       }
    }
 
@@ -82,7 +81,7 @@ public class ShopManager : MonoBehaviour
             gameManager.moveSpeed += 2f;
             break;
          case "Health":
-            //gameManager.addHP(upgrade.healthRestore);
+            playerHealth.addHP(upgrade.healthRestore);
             break;
          default:
             Debug.Log("no upgrade availible");
@@ -94,11 +93,6 @@ public class ShopManager : MonoBehaviour
       Debug.Log("fdas");
       toggle = !toggle;
       shopUI.SetActive(toggle);
-   }
-
-   public void OnGUI()
-   {
-      coinText.text = "Coins: " + coins.ToString();
    }
 }
 

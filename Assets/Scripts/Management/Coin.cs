@@ -8,9 +8,10 @@ public class Coin : MonoBehaviour
 {
      public static int totalCoins = 0;
      int value;
-
+     private EconomyManager economyManager;
      private void Start()
      {
+         economyManager = GameObject.FindGameObjectWithTag("EconomyManager").GetComponent<EconomyManager>();
          value = Random.Range(10, 40);
      }
 
@@ -18,7 +19,7 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            ShopManager.instance.coins+=value; 
+            economyManager.currentGold+=value; 
                 //Destroy(gameObject);
 
         }
