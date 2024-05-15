@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7700758825374236578}
   - component: {fileID: 7548940493815512192}
   - component: {fileID: 476502639628674298}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DeathVFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
