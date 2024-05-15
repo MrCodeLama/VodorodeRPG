@@ -16,6 +16,7 @@ public class ShopManager : MonoBehaviour
    public PlayerController player;
    private EconomyManager economyManager;
    private PlayerHealth playerHealth;
+   [SerializeField] private AudioSource buysound;
    private void Awake()
    {
       economyManager = GameObject.FindGameObjectWithTag("EconomyManager").GetComponent<EconomyManager>();
@@ -66,6 +67,7 @@ public class ShopManager : MonoBehaviour
    {
       if (economyManager.currentGold>=upgrade.cost)
       {
+         buysound.Play();
          economyManager.currentGold -= upgrade.cost;
          upgrade.quantity++;
          upgrade.itemRef.transform.GetChild(0).GetComponent<Text>().text = upgrade.quantity.ToString();

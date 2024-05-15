@@ -64,6 +64,8 @@ public class PlayerHealth : Singleton<PlayerHealth>
             currentHealth = 0;
             GameObject.FindWithTag("canvas").GetComponent<DeathScreen>().Death();
             GameObject.FindWithTag("DeathAudio").GetComponent<AudioSource>().Play();
+            GameObject.FindWithTag("Sound").SetActive(false);
+            GameObject.FindWithTag("minimap").SetActive(false);
         }
     }
     private IEnumerator DamageRecoveryRoutine()

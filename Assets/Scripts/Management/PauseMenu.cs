@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,14 +6,20 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
-
+    private GameObject minimap;
     public AudioSource sound;
     public GameObject notWanted;
     public GameObject pauseMenuUI;
+
+    private void Awake()
+    {
+        minimap = GameObject.FindWithTag("minimap");
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        {sound.Play();
             if (gameManager.GameIsPaused)
             {
                 Resume();
@@ -29,6 +36,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {sound.Play();
+        minimap.SetActive(true);
         notWanted.SetActive(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -37,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        minimap.SetActive(false);
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         gameManager.GameIsPaused = true;

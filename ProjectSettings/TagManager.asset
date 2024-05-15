@@ -18,6 +18,8 @@ TagManager:
   - EconomyManager
   - coins
   - coincollect
+  - Sound
+  - minimap
   layers:
   - Default
   - TransparentFX
